@@ -335,6 +335,7 @@ function shuffleTraits() {
 function removeAllTraits() {
     if (!confirm("Clear all traits?")) return;
     
+    // Clear current selections
     selectedTraits = {
         mask: null,
         necklace: null,
@@ -343,12 +344,17 @@ function removeAllTraits() {
         background: null
     };
     
+    // ALSO clear the saved preset from localStorage
+    localStorage.removeItem('anonymous_preset');
+    
     var activeBtn = document.querySelector('.trait-tabs .active');
     if (activeBtn) {
         var tabName = activeBtn.id.replace('-btn', '');
         selectTab(tabName);
     }
     renderCanvas();
+    
+    alert("All traits cleared and preset removed.");
 }
 
 function savePreset() {
