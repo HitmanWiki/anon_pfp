@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Anon PFP Generator - 4chan Style</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>4</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-container">
+            <a href="#" class="logo">Anon PFP Generator</a>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">/b/</a>
+                <a href="#">/g/</a>
+                <a href="#">/v/</a>
+                <a href="#">/a/</a>
+                <a href="#">Catalog</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="app">
+        <div class="panel">
+            <div class="panel-title">Thread: $Anon PFP Generator v1.0 - No rules</div>
+            <div class="info-box">
+                <p><span class="greentext">>Welcome to the $Anon PFP Generator</span></p>
+                <p>Generate your own anonymous persona. All images are stored locally - no data collection.</p>
+                <p><span class="spoiler">This is a spoiler text</span> | <a href="#">FAQ</a> | <a href="#">Report</a> | <a href="#">Contact</a></p>
+            </div>
+        </div>
+
+        <div class="main-grid">
+            <div class="panel">
+                <div class="panel-title">Preview</div>
+                <div class="preview-box">
+                    <canvas id="pfpCanvas" width="1024" height="1024"></canvas>
+                </div>
+                <div class="info-box" style="margin-top: 10px;">
+                    <div class="form-label">Filename:</div>
+                    <div class="filename">anon_<span id="randomId">#####</span>.png</div>
+                    <div class="action-buttons">
+                        <button id="download">Download PFP</button>
+                        <button id="visit4chan">Visit /a/</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-title">Traits Selection</div>
+                
+                <!-- In your index.html, make sure you have these exact 5 buttons -->
+<div class="trait-tabs">
+    <button class="tab-button active" id="background-btn">BACKGROUND</button>
+    <button class="tab-button" id="base-btn">BASE</button>
+    <button class="tab-button" id="clothes-btn">CLOTHES</button>
+    <button class="tab-button" id="necklace-btn">NECKLACE</button>
+    <button class="tab-button" id="mask-btn">MASK</button>
+</div>
+
+                <div id="traits-container" class="traits-display"></div>
+
+                <div class="action-buttons" style="margin-top: 15px;">
+                    <button id="shuffle">Randomize (Shuffle)</button>
+                    <button id="removeAll">Clear All</button>
+                    <button id="savePreset">Save Preset</button>
+                </div>
+
+                <div class="info-box" style="margin-top: 15px;">
+                    <div class="form-label">Current Selection:</div>
+                    <div id="currentSelection">
+                        <span class="post-number">>></span> None selected
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">Instructions & Info</div>
+            <div class="info-box">
+                <p><span class="greentext">>How to use:</span></p>
+                <p>1. Select a category from the tabs above</p>
+                <p>2. Click on traits to add/remove them</p>
+                <p>3. Click "Randomize" for a surprise</p>
+                <p>4. Click "Download PFP" to save your creation</p>
+                
+                <p style="margin-top: 10px;"><span class="greentext">>Note:</span> This tool runs entirely in your browser. No data is sent to any server.</p>
+                <p><span class="greentext">>Supported formats:</span> PNG, custom gradients</p>
+                <p><span class="greentext">>Resolution:</span> 1024×1024 (1:1 ratio)</p>
+                
+                <div class="action-buttons" style="justify-content: flex-start; margin-top: 10px;">
+                    <button id="copyUrl">Copy Image URL</button>
+                    <button id="printPreview">Print Preview</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Anon PFP Generator - Based on 4chan aesthetic</p>
+            <p>All trademarks and copyrights belong to their respective owners</p>
+            <p>This is a fan-made tool. Not affiliated with 4chan.</p>
+            <p style="margin-top: 5px;">
+                <a href="#">Home</a> | 
+                <a href="#">Archive</a> | 
+                <a href="#">Rules</a> | 
+                <a href="#">Feedback</a> | 
+                <a href="#">Donate</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

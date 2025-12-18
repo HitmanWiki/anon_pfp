@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #EFF0F1;
+    color: #000;
+    line-height: 1.4;
+    font-size: 13px;
+}
+
+.header {
+    background: #800000;
+    color: white;
+    padding: 5px 10px;
+    border-bottom: 2px solid #660000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
+
+.logo:hover {
+    color: #FFCC00;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 12px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: #FFCC00;
+}
+
+.app {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 0 10px;
+}
+
+.panel {
+    background: white;
+    border: 1px solid #B7C5D9;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.panel-title {
+    background: #98E;
+    color: white;
+    padding: 4px 8px;
+    font-weight: bold;
+    margin: -10px -10px 10px -10px;
+    border-bottom: 1px solid #B7C5D9;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.preview-box {
+    background: #F0E0D6;
+    border: 1px solid #D9BFB7;
+    padding: 15px;
+    text-align: center;
+    height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pfpCanvas {
+    width: 256px;
+    height: 256px;
+    background: white;
+    border: 1px solid #B7C5D9;
+}
+
+.trait-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #B7C5D9;
+    padding-bottom: 5px;
+}
+
+.trait-tabs button {
+    background: #EA8;
+    border: 1px solid #B7C5D9;
+    padding: 4px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    color: black;
+}
+
+.trait-tabs button:hover {
+    background: #FFAA44;
+}
+
+.trait-tabs button.active {
+    background: #98E;
+    color: white;
+    border-color: #769;
+}
+
+.traits-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 8px;
+    padding: 10px;
+    background: #F0E0D6;
+    border: 1px solid #D9BFB7;
+    min-height: 120px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.traits-display img, .gradient-preview {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    border: 1px solid #B7C5D9;
+    object-fit: cover;
+}
+
+.traits-display img.selected, .gradient-preview.selected {
+    border: 2px solid #F00;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.traits-display img:hover, .gradient-preview:hover {
+    border: 1px solid #00F;
+}
+
+.gradient-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: center;
+    word-break: break-all;
+    padding: 2px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.action-buttons button {
+    padding: 8px 16px;
+    background: #EA8;
+    border: 1px solid #B7C5D9;
+    cursor: pointer;
+    font-size: 12px;
+    color: black;
+}
+
+.action-buttons button:hover {
+    background: #FFAA44;
+}
+
+.action-buttons button:active {
+    background: #CC7700;
+}
+
+.greentext {
+    color: #789922;
+}
+
+.spoiler {
+    background: black;
+    color: black;
+    padding: 0 2px;
+}
+
+.spoiler:hover {
+    color: white;
+}
+
+.info-box {
+    background: #F0E0D6;
+    border: 1px solid #D9BFB7;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.info-box a {
+    color: #00F;
+    text-decoration: none;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    font-size: 11px;
+    color: #666;
+    margin: 20px 0;
+    padding: 10px;
+    border-top: 1px solid #B7C5D9;
+}
+
+.post-number {
+    color: #789922;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.filename {
+    font-family: monospace;
+    background: #EEE;
+    padding: 2px 4px;
+    border: 1px solid #CCC;
+}
+
+@media (max-width: 480px) {
+    .traits-display {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    }
+    
+    .traits-display img, .gradient-preview {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .action-buttons button {
+        width: 100%;
+    }
+}
